@@ -1,0 +1,98 @@
+// USER VARIABLES SECTION
+
+$accent: #EAC666 // Accent Color
+$fontsize: 12px // Body Font Size
+$textcolor: #FFFFFF // Text Color
+$bg: #101015
+$cubic: cubic-bezier(0.05, 0.83, 0.52, 0.97)
+$gradient-1: linear-gradient(267deg, #E8C25F 0%, #F2E191 50%, $accent 100%)
+$box-shadow: 0 1px 10px rgba($accent, .4)
+$box-shadow-2: 0px 0px 13px $accent
+$trt-1: 250ms ease
+$lineheight: 1.5 // Document Line Height
+$userfont: Sora, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 13px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Sora', normal, 300, '../fonts/Sora-Light.woff2')
+@include font('Sora', normal, 400, '../fonts/Sora-Regular.woff2')
+@include font('Sora', normal, 600, '../fonts/Sora-SemiBold.woff2')
+@include font('Sora', normal, 700, '../fonts/Sora-Bold.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: $bg
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+html
+	font-family: $userfont
+	font-size: $fontsize
+	scroll-behavior: smooth
+
+body
+	line-height: $lineheight
+	color: $textcolor
+	background-color: $bg
+	position: relative
+	overflow-x: hidden
+
+*,
+*::before,
+*::after
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+a
+	color: inherit
+	text-decoration: none
+
+li
+	list-style: none
+
+img
+	display: block
+	height: auto
+
+input,
+button
+	background: none
+	font: inherit
+
+input
+	width: 100%
+	border: 0.634686px solid #EAEAEA
+	outline: none
+
+button
+	border: none
+	color: $bg
+	cursor: pointer

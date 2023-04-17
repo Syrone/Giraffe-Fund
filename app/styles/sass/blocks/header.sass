@@ -1,0 +1,121 @@
+.header
+	width: 100%
+	padding-block: 13px
+	background-color: #2F2F2F
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10
+	transition: $trt-1
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-inline: 16px
+	.logo
+		order: 1
+	.user
+		display: flex
+		align-items: center
+		gap: 8px
+		order: 2
+		span
+			display: none
+	&.active
+		box-shadow: $box-shadow
+
+.navbar
+	display: flex
+	flex-direction: column
+	max-width: 450px
+	width: 100%
+	height: 100vh
+	padding: 13px 16px
+	background-color: $bg
+	position: fixed
+	top: 0
+	left: -450px
+	z-index: 15
+	transition: 400ms $cubic
+	visibility: hidden
+	.nav-toggle-btn
+		&::before
+			top: 50%
+			transform: rotate(45deg) translateY(-50%)
+		&::after
+			top: 50%
+			transform: rotate(-45deg) translateY(-50%)
+			left: 1px
+	&-top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.logo
+			margin-inline: auto
+			order: 1
+	&-list
+		margin-block-start: 50px
+	&-item
+		padding-block: 8px
+		position: relative
+		transition: $trt-1
+		&::before
+			content: ''
+			width: 3px
+			height: 10px
+			background-color: $accent
+			position: absolute
+			left: -10px
+			top: 50%
+			transform: translateY(-50%)
+			border-radius: 5px
+			opacity: 0
+			transition: $trt-1
+		&:is(:hover, :focus-visible, .active)
+			transform: translateX(10px)
+			&::before
+				opacity: 1
+	&-link
+		font-size: 14px
+		font-weight: 300
+		text-transform: uppercase
+	&.active
+		transform: translateX(450px)
+		transition-duration: 500ms
+		visibility: visible
+
+.nav-toggle-btn
+	display: block
+	position: relative
+	width: 24px
+	height: 21px
+	&::before, &::after, span
+		content: ''
+		width: 100%
+		height: 3px
+		border-radius: 30px
+		background-color: #fff
+		position: absolute
+		left: 0
+	&::before
+		top: 0
+	span
+		top: 50%
+		transform: translateY(-50%)
+	&::after
+		bottom: 0
+
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	background-color: $bg
+	opacity: 0
+	visibility: hidden
+	transition: $trt-1
+	&.active
+		visibility: visible
+		opacity: 0.5
+		z-index: 10
