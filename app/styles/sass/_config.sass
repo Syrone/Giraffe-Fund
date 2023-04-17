@@ -4,8 +4,10 @@ $accent: #EAC666 // Accent Color
 $fontsize: 12px // Body Font Size
 $textcolor: #FFFFFF // Text Color
 $bg: #101015
+$bg-2: #212121
 $cubic: cubic-bezier(0.05, 0.83, 0.52, 0.97)
-$gradient-1: linear-gradient(267deg, #E8C25F 0%, #F2E191 50%, $accent 100%)
+$gradient-1: linear-gradient(267deg, #E8C25F 0%, #F2E191 50%, #D3A647 100%)
+$gradient-2: radial-gradient(50% 100% at 100% 100%, #E9C565 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(50% 100% at 1.64% 2.46%, #E8C463 0%, rgba(0, 0, 0, 0) 100%)
 $box-shadow: 0 1px 10px rgba($accent, .4)
 $box-shadow-2: 0px 0px 13px $accent
 $trt-1: 250ms ease
@@ -56,13 +58,13 @@ html
 	font-family: $userfont
 	font-size: $fontsize
 	scroll-behavior: smooth
+	overflow-x: hidden
 
 body
 	line-height: $lineheight
 	color: $textcolor
 	background-color: $bg
 	position: relative
-	overflow-x: hidden
 
 *,
 *::before,
