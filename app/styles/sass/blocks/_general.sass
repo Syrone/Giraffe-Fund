@@ -50,9 +50,20 @@ h2
 
 .effect
 	display: block
+	background-repeat: no-repeat !important
+	background-size: contain !important
 	position: absolute
 	opacity: 0.8
-	mix-blend-mode: soft-light
+	&-light
+		background: $gradient-1
+		border-radius: 100%
+		filter: blur(45px)
+		z-index: -2
+	&-smoke
+		mix-blend-mode: soft-light
+		opacity: 0.4
+		z-index: -1
+
 
 video
 	border-radius: 6px
@@ -85,4 +96,3 @@ video
 		border: 1px solid $bg-2
 		&::before
 			display: none
-
