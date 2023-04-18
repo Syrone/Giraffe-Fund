@@ -1,0 +1,84 @@
+.info
+	padding-block: 40px
+	position: relative
+	&::before
+		content: ''
+		background: url(../images/dist/gold-bg-mobile.svg) no-repeat
+		background-size: cover
+		position: absolute
+		top: 0
+		bottom: 50%
+		left: -10px
+		right: -10px
+		z-index: -2
+	&::after
+		content: ''
+		background: url(../images/dist/gold-bg-mobile.svg) no-repeat
+		background-size: cover
+		position: absolute
+		bottom: 0
+		top: 49%
+		left: -10px
+		right: -10px
+		transform: rotate3d(1, 0, 0, 180deg)
+		z-index: -2
+	.container
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		gap: 25px
+	&-content
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		color: $bg
+		max-width: 290px
+		&-title
+			max-width: 220px
+			font-weight: 500
+			margin-bottom: 5px
+			span
+				display: block
+				font-weight: 600
+		&-text
+			font-size: 14px
+			font-weight: 400
+			span
+				display: block
+				font-weight: 600
+	&-form
+		min-width: 290px
+		border-radius: 16px
+		box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.27)
+		text-align: center
+		color: $bg
+		position: relative
+		&::before
+			content: ''
+			background: url(../images/dist/triangle.svg) no-repeat center
+			background-size: contain
+			position: absolute
+			top: -10px
+			bottom: -10px
+			right: -10px
+			left: -10px
+			z-index: -1
+		&-title
+			font-size: 16px
+			font-weight: 400
+			text-transform: none
+			margin-bottom: 20px
+			span
+				font-size: 11px
+				display: block
+		.group + .group
+			margin-top: 10px
+		.item-gold
+			font-size: 12px
+			font-weight: 600
+			line-height: normal
+			border-radius: 40px
+			padding: 15px
+			border: none

@@ -25,6 +25,11 @@ body.nav-active
 	display: flex
 	align-items: center
 	justify-content: center
+	width: 100%
+	max-width: 290px
+	font-size: 16px
+	font-weight: 500
+	line-height: normal
 	text-align: center
 	border-radius: 34px
 	padding: 16px
@@ -37,10 +42,7 @@ body.nav-active
 		padding: 5px
 		border-radius: 100%
 		box-sizing: content-box
-	&-more
-		font-size: 16px
-		font-weight: 500
-		line-height: normal
+		
 
 h2, h3
 	text-transform: uppercase
@@ -58,11 +60,15 @@ h2
 		background: $gradient-1
 		border-radius: 100%
 		filter: blur(45px)
-		z-index: -2
+		z-index: -5
 	&-smoke
 		mix-blend-mode: soft-light
 		opacity: 0.4
+		z-index: -4
+	&-lines
+		mix-blend-mode: soft-light
 		z-index: -1
+
 
 
 video
@@ -96,3 +102,20 @@ video
 		border: 1px solid $bg-2
 		&::before
 			display: none
+
+form
+	padding: 20px 15px
+	background-color: #fff
+	input
+		border-radius: 8px
+		padding: 10px
+		border: 1px solid #EAEAEA
+		color: $bg
+		text-align: center
+		background-color: transparent
+		&::placeholder
+			color: #10101580
+			text-align: center
+	button
+		outline: $accent
+		width: 100%

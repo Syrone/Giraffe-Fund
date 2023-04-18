@@ -1,0 +1,128 @@
+.strategy
+	padding-block: 30px
+	position: relative
+	&-title, &-text
+		text-align: center
+	&-text
+		padding-inline: 5px
+	.effect
+		&-lines
+			width: 100%
+			background: url(../images/dist/effects/lines.svg) center
+			background-size: cover!important
+			top: -30px
+			bottom: 20%
+		&-smoke-1
+			width: 1100px
+			height: 300px
+			background: url(../images/dist/effects/smoke-2.png) center
+			background-size: cover!important
+			top: 30px
+			left: 50%
+			transform: translate(-50%)
+		&-smoke-2
+			width: 1050px
+			height: 430px
+			background: url(../images/dist/effects/smoke.png) center
+			background-size: cover!important
+			top: 330px
+			right: 50%
+			transform: rotate(180deg) translateX(-50%)
+		&-light
+			width: 80%
+			height: 90%
+			left: 50%
+			transform: translate(-50%)
+			bottom: 0
+			filter: blur(200px)
+
+	.item:before
+		background: $gradient-3
+		top: -2px
+		bottom: -2px
+		right: -2px
+		left: -2px
+	.btn
+		margin-inline: auto
+	&-article
+		display: grid
+		gap: 20px
+		padding: 45px 20px 15px 20px
+		margin-block: 35px 25px
+		max-width: 800px
+		margin-inline: auto
+		.article
+			&-title
+				min-width: 200px
+				font-size: 11px
+				font-weight: 500
+				text-transform: none
+				text-align: center
+				color: $bg
+				background: $gradient-1
+				border-radius: 8px
+				padding: 5px
+				position: absolute
+				top: -20px
+				left: 50%
+				transform: translateX(-50%)
+			&-items
+				display: grid
+				grid-template-columns: repeat(2, 1fr)
+				justify-items: center
+				column-gap: 22px
+			&-item
+				display: flex
+				flex-direction: column
+				align-items: center
+				text-align: center
+				gap: 10px
+				max-width: min-content
+				&:nth-child(2)
+					grid-column: span 2
+					order: 1
+			&-subtitle
+				font-size: 9px
+				font-weight: 400
+				line-height: normal
+				text-align: center
+				border-radius: 6px
+				padding: 8px
+				color: $bg-2
+				background-color: $textcolor
+				span
+					font-weight: 500
+		.graph
+			width: 1198px
+			height: 476px
+			background: url(../images/dist/graph.svg) no-repeat center
+			background-size: cover
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			z-index: -1
+					
+.partners
+	&-items
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		max-width: 420px
+		margin-inline: auto
+		gap: 10px
+		margin-block: 25px
+	&-item
+		min-width: 130px
+		min-height: 70px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #2525254D
+		border-radius: 10px
+		padding: 10px
+		img
+			height: auto
+			object-fit: cover
+
+
