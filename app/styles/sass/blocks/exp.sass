@@ -72,3 +72,37 @@
 			margin-bottom: 8px
 			&:last-child
 				margin-bottom: 16px
+
+
+@media (min-width: 768px)
+	.exp
+		.container
+			flex-direction: row
+			justify-content: center
+			gap: 60px
+		&-title
+			font-size: 20px
+			text-transform: none
+			text-align: right
+		&-content
+			text-align: left
+			max-width: 500px
+			&::before
+				border-bottom: unset
+				transform: unset
+				width: 5px
+				height: 100%
+				left: -30px
+				border-left: 5px solid $accent
+				bottom: auto
+			&-title
+				font-size: 20px
+				padding-block: 0
+				margin-bottom: 4px
+				&:before, &::after
+					display: none
+			&-text
+				font-size: 14px
+				margin-bottom: 4px
+				&:last-child
+					margin-bottom: 0

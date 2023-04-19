@@ -1,29 +1,27 @@
 .hero
 	padding-block: 90px 30px
 	position: relative
-	&::after
+	&::before
 		content: ''
 		width: 540px
 		height: 270px
-		background: url(../images/dist/hero-bg.png) no-repeat center
-		background-size: cover
+		background: radial-gradient(40% 40% at 50% 40%,transparent 0,#101015 100%)
 		position: absolute
 		bottom: 30px
 		right: 0
 		z-index: -2
-	&::before
+	&::after
 		content: ''
-		width: 100%
-		height: 100%
-		max-width: 400px
-		max-height: 350px
-		background: url(../images/dist/effects/fx.svg) no-repeat center
+		width: 540px
+		height: 270px
+		background: url(../images/dist/hero-bg.jpg) no-repeat center
+		mix-blend-mode: luminosity
 		background-size: cover
 		position: absolute
-		bottom: 0
-		left: 50%
-		transform: translate(-50%)
-		z-index: -1
+		bottom: 30px
+		right: 0
+		opacity: 0.4
+		z-index: -3
 	.container
 		display: flex
 		flex-direction: column
@@ -48,12 +46,26 @@
 			font-weight: 300
 			& > span
 				font-weight: 400
-		&-subtitle
-			font-weight: 600
+			.text-bold
+				display: block
+				font-weight: 600
 	&-image
 		max-width: 250px
 		position: relative
 		margin-inline: auto
+		position: relative
+		&::before
+			content: ''
+			width: 250px
+			height: 250px
+			background: $gradient-1
+			border-radius: 100%
+			filter: blur(45px)
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%)
+			z-index: -1
 	&-inner
 		border-radius: 4px
 		padding: 9px 11px
@@ -71,3 +83,47 @@
 		&-slogan
 			font-size: 10px
 			font-weight: 400
+
+
+@media (min-width: 550px)
+	.hero
+		margin-top: 65px
+		padding-block-start: 55px 
+		&::after, &::before
+			width: 100vw
+			height: 100%
+			background-size: contain
+			bottom: 0
+
+@media (min-width: 768px)
+	.hero
+		position: relative
+		.container
+			flex-direction: row
+			align-items: center
+			justify-content: space-around
+		&-content
+			text-align: left
+			font-size: unset
+			max-width: 380px
+			&-title
+				font-size: 35px
+				span
+					font-size: 25px
+			&-text
+				font-size: 16px
+				margin-bottom: 20px
+				.text-bold
+					display: inline
+		&-image
+			max-width: 300px
+			margin-inline: unset
+			&::before
+				width: 280px
+				height: 280px
+		.btn-more
+			position: static
+			transform: unset
+			left: unset
+			bottom: unset
+			margin-inline: unset

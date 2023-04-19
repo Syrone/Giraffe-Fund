@@ -1,10 +1,37 @@
 .strategy
 	padding-block: 30px
 	position: relative
+	&::after
+		content: ''
+		background: $bg
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -3
+	&::before
+		content: ''
+		width: 180vw
+		height: 200px
+		background: $bg
+		border-radius: 100% 100%
+		border-bottom: 3px solid $accent
+		border-left: 40px solid $accent
+		border-right: 40px solid $accent
+		border-top-left-radius: 0%
+		border-top-right-radius: 0%
+		position: absolute
+		bottom: -30px
+		left: 50%
+		transform: translate(-50%)
+		z-index: -3
 	&-title, &-text
 		text-align: center
 	&-text
 		padding-inline: 5px
+		max-width: 550px
+		margin-inline: auto
 	.effect
 		&-lines
 			width: 100%
@@ -20,6 +47,7 @@
 			top: 30px
 			left: 50%
 			transform: translate(-50%)
+			mix-blend-mode: overlay
 		&-smoke-2
 			width: 1050px
 			height: 430px
@@ -28,6 +56,7 @@
 			top: 330px
 			right: 50%
 			transform: rotate(180deg) translateX(-50%)
+			mix-blend-mode: overlay
 		&-light
 			width: 80%
 			height: 90%
@@ -35,15 +64,13 @@
 			transform: translate(-50%)
 			bottom: 0
 			filter: blur(200px)
-
+			background: linear-gradient(0deg, #E8C25F, #E8C25F), linear-gradient(180deg, #FFE458 0%, rgba(255, 228, 88, 0) 180%)
 	.item:before
 		background: $gradient-3
 		top: -2px
 		bottom: -2px
 		right: -2px
 		left: -2px
-	.btn
-		margin-inline: auto
 	&-article
 		display: grid
 		gap: 20px
@@ -82,11 +109,13 @@
 					grid-column: span 2
 					order: 1
 			&-subtitle
+				max-width: 350px
 				font-size: 9px
 				font-weight: 400
 				line-height: normal
 				text-align: center
 				border-radius: 6px
+				margin-inline: auto
 				padding: 8px
 				color: $bg-2
 				background-color: $textcolor
@@ -102,15 +131,9 @@
 			left: 50%
 			transform: translateX(-50%)
 			z-index: -1
-					
+
 .partners
 	&-items
-		display: flex
-		flex-wrap: wrap
-		justify-content: center
-		max-width: 420px
-		margin-inline: auto
-		gap: 10px
 		margin-block: 25px
 	&-item
 		min-width: 130px
@@ -125,4 +148,25 @@
 			height: auto
 			object-fit: cover
 
+@media (min-width: 550px)
+	.strategy-article
+		max-width: 550px
+		.article-items
+			all: unset
+			display: flex
+			justify-content: center
+			gap: 50px
+		.article-item:nth-child(2)
+			grid-column: unset
+			order: 0
+			display: flex
+		.graph
+			width: 1200px
+			height: 100%
+			background-size: contain
+
+	.strategy:before
+		border-right-width: 100px
+		border-left-width: 100px
+		border-bottom-width: 4px
 

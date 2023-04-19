@@ -56,6 +56,8 @@
 	&-list
 		margin-block-start: 50px
 	&-item
+		display: flex
+		align-items: center
 		padding-block: 8px
 		position: relative
 		transition: $trt-1
@@ -119,3 +121,35 @@
 		visibility: visible
 		opacity: 0.5
 		z-index: 10
+
+@media (min-width: 1100px)
+	.nav-toggle-btn,
+	.navbar-top
+		display: none
+
+	.navbar,
+	.navbar.active
+		all: unset
+		display: flex
+		align-items: center
+	
+	.navbar-list
+		margin-block-start: 0
+		display: flex
+		gap: 35px
+		margin-inline: auto
+
+	.navbar-item
+		&:is(:hover, :focus-visible, .active)
+			transform: unset
+		&::before
+			width: 10px
+			height: 3px
+			top: auto
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+
+	.header
+		.logo
+			order: 0

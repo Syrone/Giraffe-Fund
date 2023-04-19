@@ -32,6 +32,8 @@ body.nav-active
 	line-height: normal
 	text-align: center
 	border-radius: 34px
+	margin-inline: auto
+	border: 1px solid transparent
 	padding: 16px
 	background: $gradient-1
 	box-shadow: $box-shadow-2
@@ -42,6 +44,27 @@ body.nav-active
 		padding: 5px
 		border-radius: 100%
 		box-sizing: content-box
+	&-outline
+		background: transparent
+		border-color: $accent
+		box-shadow: none
+	&-transparent
+		margin-top: 5px
+		color: #10101580
+	&-close
+		max-width: max-content
+		height: max-content
+		padding: 10px
+		position: absolute
+		top: 10px
+		right: 10px
+		svg
+			path
+				transition: $trt-1
+		&:is(:hover, :focus-within)
+			svg
+				path
+					stroke: #10101580
 		
 
 h2, h3
@@ -56,18 +79,17 @@ h2
 	background-size: contain !important
 	position: absolute
 	opacity: 0.8
+	z-index: -1
 	&-light
 		background: $gradient-1
 		border-radius: 100%
 		filter: blur(45px)
-		z-index: -5
+		z-index: -2
 	&-smoke
 		mix-blend-mode: soft-light
 		opacity: 0.4
-		z-index: -4
 	&-lines
 		mix-blend-mode: soft-light
-		z-index: -1
 
 
 
@@ -106,16 +128,58 @@ video
 form
 	padding: 20px 15px
 	background-color: #fff
-	input
+	textarea
+		width: 100%
+		resize: none
+	input, textarea
+		display: block
+		max-width: 400px
 		border-radius: 8px
-		padding: 10px
 		border: 1px solid #EAEAEA
+		margin-inline: auto
+		padding: 10px
+		background-color: $textcolor
 		color: $bg
 		text-align: center
-		background-color: transparent
 		&::placeholder
 			color: #10101580
 			text-align: center
 	button
 		outline: $accent
 		width: 100%
+
+.block-items
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	max-width: 420px
+	margin-inline: auto
+	gap: 10px
+
+.wrapper-form
+	display: none
+	width: 100%
+	max-width: 510px
+	min-width: 320px
+	padding-inline: 25px
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	z-index: 100
+	&.active
+		display: block
+	form
+		padding-block: 30px
+		border-radius: 16px
+		position: relative
+		input
+			max-width: 100%
+	.group
+		& + .group
+			margin-top: 12px
+			&-login
+				margin-top: 8px
+	.btn
+		max-width: 100%
+		font-weight: 600
