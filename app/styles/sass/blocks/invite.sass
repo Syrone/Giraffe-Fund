@@ -42,7 +42,7 @@
 			content: ''
 			width: 100%
 			height: 100%
-			background: linear-gradient(180deg, transparent 8%, transparent 15%, $bg 50%, $bg 65%, $bg 85%)
+			background: linear-gradient(180deg,transparent 10%,transparent 15%,$bg 85%)
 			position: absolute
 		& > div
 			width: 106px
@@ -102,7 +102,7 @@
 		width: 30px
 		height: 30px
 		background: radial-gradient(50% 50% at 50% 50%, #F2E191 30%, #E8C25F 100%)
-		border-radius: 20px
+		border-radius: 100%
 		position: absolute
 		top: -15px
 		left: 50%
@@ -112,5 +112,93 @@
 @media (min-width: 550px)
 	.invite-content
 		margin-block-start: -30%
-	.invite-img>div
-		width: 150px
+	.invite-img
+		& > div
+			width: 150px
+		&::before
+			background: linear-gradient(180deg, transparent 8%, transparent 15%, $bg 50%, $bg 65%, $bg 85%)
+
+@media (min-width: 768px)
+	.invite-img
+		margin-top: 40px
+		padding-block: 10% 30%
+		& > div
+			width: 220px
+			&::before
+				filter: blur(85px)
+				opacity: 0.8
+	.invite
+		.effect-light
+			width: 90%
+			height: 360px
+			filter: blur(70px)
+			bottom: 0
+		&-content
+			max-width: 550px
+			margin-block: -25% 100px
+		&-title
+			font-size: 20px
+			margin-bottom: 10px
+		&-subtitle
+			font-size: 16px
+			font-weight: 400
+			margin-bottom: 10px
+		&-text
+			font-size: 14px
+			font-weight: 400
+			margin-bottom: 30px
+
+	.features
+		&-items
+			margin-bottom: 100px
+			&.block-items
+				max-width: 1200px
+				row-gap: 50px
+		&-item
+			font-size: 14px
+			max-width: 238px
+			min-height: 140px
+			padding: 40px 20px 15px
+		&-decor
+			width: 60px
+			height: 60px
+			top: -30px
+			img
+				width: 50%
+				
+@media (min-width: 992px)
+	.invite
+		.effect-light
+			height: 600px
+			bottom: -180px
+		&-img
+			margin-top: 100px
+			&::before
+				background: linear-gradient(180deg,transparent 8%,#101015 70%)
+		&-content
+			max-width: 950px
+			margin-block: -20% 120px
+		&-title
+			font-size: 36px
+		&-subtitle
+			max-width: 740px
+			font-size: 22px
+			margin-inline: auto
+		&-text
+			max-width: 750px
+			font-size: 18px
+			margin-inline: auto
+		.btn
+			font-size: 24px
+			max-width: max-content
+			padding: 20px 30px
+			border-radius: 60px
+
+	.features
+		&-items
+			margin-bottom: 140px
+		&-item
+			max-height: unset
+			font-size: 18px
+			max-width: 340px
+			padding: 40px 25px

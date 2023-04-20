@@ -76,6 +76,7 @@
 
 @media (min-width: 768px)
 	.exp
+		padding-block: 45px
 		.container
 			flex-direction: row
 			justify-content: center
@@ -106,3 +107,21 @@
 				margin-bottom: 4px
 				&:last-child
 					margin-bottom: 0
+
+@media (min-width: 992px)
+	.exp
+		padding-block: 80px
+		&-title
+			font-size: 36px
+			max-width: 240px
+		.container
+			gap: 100px
+		&-content
+			max-width: 690px
+			&::before
+				left: -50px
+			&-title
+				font-size: 29px
+			&-text
+				font-size: 18px
+

@@ -63,3 +63,42 @@
 			left: 50%
 			transform: translate(-50%)
 
+@media (min-width: 768px)
+	.join
+		&-form
+			&-title
+				font-size: 20px
+			&-text
+				max-width: 450px
+				font-size: 16px
+			.group
+				display: flex
+				align-items: center
+				justify-content: center
+				gap: 15px
+				input + input
+					margin-top: unset
+			.btn
+				font-size: 15px
+				text-transform: uppercase
+
+
+@media (min-width: 992px)
+	.join
+		&-form
+			&-title
+				font-size: 36px
+			&-text
+				max-width: 730px
+				font-size: 24px
+			input
+				font-size: 16px
+				padding: 20px 24px
+				border-radius: 16px
+				margin-inline: unset
+				&::placeholder
+					font-size: 16px
+			.btn
+				max-width: max-content
+				font-size: 18px
+				padding: 15px 40px

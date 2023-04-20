@@ -103,3 +103,74 @@
 		align-items: flex-start
 		gap: 50px
 		margin-top: 30px
+
+@media (min-width: 768px)
+	.question
+		padding-block: 100px
+		&-title
+			font-size: 20px
+			margin-bottom: 65px
+		&-inner
+			all: unset
+			display: grid
+			grid-template-columns: 1fr 1fr
+			column-gap: 30px
+		&-content
+			display: flex
+			flex-direction: column
+			justify-content: center
+			max-width: 350px
+			font-size: 16px
+			margin-inline: unset
+			margin-left: 10%
+			&-title
+				font-size: 18px
+		&-contact
+			margin-top: unset
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			gap: 25px
+			margin-left: 10%
+			&-item
+				flex-direction: row
+				max-width: 295px
+				span
+					min-width: 48px
+		&-form
+			max-width: 450px
+			grid-row: span 2
+			&::before
+				background-size: contain
+				right: -50px
+				top: -50px
+				bottom: -50px
+				left: -50px
+
+@media (min-width: 992px)
+	.question
+		&-title
+			font-size: 36px
+		&-content
+			max-width: 500px
+			font-size: 24px
+			&-title
+				font-size: 30px
+		&-contact-item
+			font-size: 24px
+		&-form-title
+			font-size: 26px
+			input
+				font-size: 16px
+				padding: 18px 25px
+				border-radius: 12px
+				&::placeholder
+					font-size: 16px
+			textarea
+				padding: 18px 25px
+				min-height: 100px
+				font-size: 16px
+				border-radius: 12px
+				&::placeholder
+					font-size: 16px
+

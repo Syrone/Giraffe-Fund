@@ -127,3 +127,38 @@
 			left: unset
 			bottom: unset
 			margin-inline: unset
+
+@media (min-width: 992px)
+	.hero
+		&-content
+			max-width: 480px
+			&-title
+				font-size: 50px
+				span
+					font-size: 35px
+			&-text
+				font-size: 20px
+			.btn-more
+				font-size: 20px
+				max-width: max-content
+				img
+					width: 15px
+					height: 14px
+					padding: 9px
+		&-image
+			max-width: 420px
+			&::before
+				width: 400px
+				height: 400px
+				filter: blur(70px)
+		&-inner
+			padding: 16px 24px
+			border-radius: 16px
+			top: 57%
+			left: -50px
+			&-name
+				font-size: 22px
+			&-slogan
+				font-size: 18px
+
+
