@@ -38,31 +38,31 @@
 			<ul class="navbar-list">
 
 				<li class="navbar-item active">
-					<a href="#" class="navbar-link" data-nav-link>Главная</a>
+					<a href="#home" class="navbar-link" data-nav-link>Главная</a>
 				</li>
 
 				<li class="navbar-item">
-					<a href="#" class="navbar-link" data-nav-link>О Нас</a>
+					<a href="#aboutus" class="navbar-link" data-nav-link>О Нас</a>
 				</li>
 
 				<li class="navbar-item">
-					<a href="#" class="navbar-link" data-nav-link>Почему мы</a>
+					<a href="#whywe" class="navbar-link" data-nav-link>Почему мы</a>
 				</li>
 
 				<li class="navbar-item">
-					<a href="#" class="navbar-link" data-nav-link>Стратегии</a>
+					<a href="#strategy" class="navbar-link" data-nav-link>Стратегии</a>
 				</li>
 
 				<li class="navbar-item">
-					<a href="#" class="navbar-link" data-nav-link>Примеры успеха</a>
+					<a href="#example" class="navbar-link" data-nav-link>Примеры успеха</a>
 				</li>
 
 				<li class="navbar-item">
-					<a href="#" class="navbar-link" data-nav-link>Giraffe Club</a>
+					<a href="#company" class="navbar-link" data-nav-link>Giraffe Club</a>
 				</li>
 
 				<li class="navbar-item">
-					<a href="#" class="navbar-link" data-nav-link>Контакты</a>
+					<a href="#contacts" class="navbar-link" data-nav-link>Контакты</a>
 				</li>
 
 				<li class="navbar-item">
@@ -71,14 +71,14 @@
 			</ul>
 		</nav>
 
-		<button class="nav-toggle-btn" aria-label="open menu" data-nav-toggler>
+		<button type="menu" class="nav-toggle-btn" aria-label="open menu" data-nav-toggler>
 			<span></span>
 		</button>
 
 		<button type="button" class="header-user user" data-btn-signup>
 			<span>Личный кабинет</span>
 			<picture>
-				<source srcset="./images/dist/user-mobile.svg" media="(max-width: 768px)">
+				<source srcset="./images/dist/user-mobile.svg" media="(max-width: 1200px)">
 				<img src="./images/dist/user-desktop.svg" width="32" height="32" alt="user">
 			</picture>
 		</button>
@@ -88,7 +88,7 @@
 </header>
 
 <main>
-	<section class="hero">
+	<section class="hero" id="home">
 		<span class="effect effect-smoke effect-smoke-1"></span>
 		<div class="container">
 			<div class="hero-content">
@@ -100,7 +100,7 @@
 					Присоединяйтесь к успешным инвесторам и получите гарантированную <span class="text-accent">доходность до
 						27% годовых.</span> <span class="text-bold">Минимальный вход от 500 000 руб</span>
 				</p>
-				<a href="#" class="btn btn-more">Узнать подробнее <img src="./images/dist/icon/arrow-right.svg" width="9px"
+				<a href="#more-info" class="btn btn-more">Узнать подробнее <img src="./images/dist/icon/arrow-right.svg" width="9px"
 						height="8" alt="arrow"></a>
 			</div>
 
@@ -121,7 +121,7 @@
 		</div>
 	</section>
 
-	<section class="exp">
+	<section class="exp" id="aboutus">
 		<span class="effect effect-light effect-light-2"></span>
 		<span class="effect effect-light effect-light-3"></span>
 		<span class="effect effect-smoke effect-smoke-2"></span>
@@ -159,9 +159,10 @@
 				<video src="" poster="./images/dist/poster-video.jpg">
 
 				</video>
+				<span class="video-play"></span>
 			</div>
 
-			<div class="benefits-footer">
+			<div class="benefits-footer" id="more-info">
 				<p class="benefits-footer-text">Диверсификация активов в доходной недвижимости и проектах цифрой экономики –
 					делает наш фонд уникальным</p>
 				<div class="benefits-items">
@@ -193,7 +194,7 @@
 		</div>
 	</section>
 
-	<section class="about">
+	<section class="about" id="whywe">
 		<div class="container">
 			<h2 class="about-title">Почему нужно инвестировать с Giraffe Fund?</h2>
 			<div class="about-inner">
@@ -243,10 +244,10 @@
 		</div>
 	</section>
 
-	<section class="info">
+	<section class="info" >
 		<div class="container">
 			<div class="info-content">
-				<h2 class="info-content-title">Хотите узнать больше об инвестициях <span>с Giraffe Fund?</span></h2>
+				<h2 class="info-content-title">Хотите узнать больше об <span>инвестициях с Giraffe Fund?</span></h2>
 				<p class="info-content-text"><span>Зарегистрируйтесь на наш бесплатный вебинар,</span> где мы подробно
 					расскажем о стратегии инвестиций и перспективах роста</p>
 				<svg class="info-content-decor" width="310" height="104" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -276,7 +277,7 @@
 		</div>
 	</section>
 
-	<section class="strategy">
+	<section class="strategy" id="strategy">
 		<span class="effect effect-lines"></span>
 		<span class="effect effect-light"></span>
 		<span class="effect effect-smoke effect-smoke-1"></span>
@@ -284,7 +285,7 @@
 		<div class="container">
 			<h2 class="strategy-title">Стратегии инвестирования Giraffe Fund</h2>
 			<article class="strategy-article item">
-				<h3 class="article-title">Мы предлагаем разнообразные инвестиционные стратегии:</h3>
+				<h3 class="article-title">Мы предлагаем <span>разнообразные инвестиционные стратегии:</span></h3>
 				<div class="article-items">
 					<div class="article-item">
 						<picture>
@@ -314,7 +315,7 @@
 				<span class="graph"></span>
 			</article>
 
-			<h2 class="strategy-title">Некоторые из наших успешных инвестиций</h2>
+			<h2 class="strategy-title" id="example">Некоторые из наших успешных инвестиций</h2>
 			<p class="strategy-text">Ознакомьтесь с некоторыми из наших успешных инвестиций в различные сферы, такие как
 				United Gamers, Blocks, инвестирование в криптовалюту.</p>
 			<div class="partners-items block-items">
@@ -334,11 +335,11 @@
 					<img src="./images/dist/partner-2.png" width="85" height="50" loading="lazy" alt="Partner">
 				</div>
 			</div>
-			<button class="btn">Стать инвестором</button>
+			<a href="#invest" class="btn">Стать инвестором</a>
 		</div>
 	</section>
 
-	<section class="invite">
+	<section class="invite" id="company">
 		<span class="effect effect-light"></span>
 		<span class="effect effect-smoke effect-smoke-1"></span>
 		<span class="effect effect-smoke effect-smoke-2"></span>
@@ -360,7 +361,7 @@
 				<button class="btn" data-btn-signup>Стать членом клуба Giraffe Fund</button>
 			</div>
 
-			<div class="features-items block-items">
+			<div class="features-items block-items" id="invest">
 				<div class="features-item item">
 					<span class="features-decor">
 						<img src="./images/dist/icon/check.svg" width="14" height="12" alt="decoration">
@@ -411,7 +412,7 @@
 		</div>
 	</section>
 
-	<section class="question">
+	<section class="question" id="contacts">
 		<div class="container">
 			<h2 class="question-title">Связаться с нами</h2>
 			<div class="question-inner">
@@ -532,6 +533,69 @@
 			</button>
 		</form>
 	</div>
+
+	<div class="wrapper-form wrapper-thanks" style="display: none;">
+		<picture>
+			<source srcset="./images/dist/gold-logo-mobile.svg" width="119" height="123" loading="lazy" media="(max-width: 768px)">
+			<img src="./images/dist/gold-logo.svg" width="228" height="236" loading="lazy" alt="Логотип">
+		</picture>
+		<div>
+			<h3 class="wrapper-thanks-title">
+				Спасибо за регистрацию <span>на бесплатный вебинар</span> <span>GIRAFFE FUND!</span>
+			</h3>
+			<p class="wrapper-thanks-text">
+				Дата вебинара и подробные инструкции будут высланы на ваш электронный ящик
+			</p>
+		</div>
+		<button class="btn">Вернуться на сайт</button>
+		<button type="button" class="btn-close" data-btn-close>
+			<svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+				<path d="M.566 14.135 14.136.565m-13.57 0 13.57 13.57" stroke="#000" stroke-width="1.044" />
+			</svg>
+		</button>
+	</div>
+
+	<div class="wrapper-form wrapper-thanks" style="display: none;">
+		<picture>
+			<source srcset="./images/dist/gold-check-mobile.svg" width="119" height="123" loading="lazy" media="(max-width: 768px)">
+			<img src="./images/dist/gold-check.svg" width="228" height="236" loading="lazy" alt="Логотип">
+		</picture>
+		<div>
+			<h3 class="wrapper-thanks-title">
+				Ваш вопрос принят
+			</h3>
+			<p class="wrapper-thanks-text">
+				В ближайшее время с Вами свяжется наш менеджер и ответит на все ваши вопросы
+			</p>
+		</div>
+		<button class="btn">Вернуться на сайт</button>
+		<button type="button" class="btn-close" data-btn-close>
+			<svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+				<path d="M.566 14.135 14.136.565m-13.57 0 13.57 13.57" stroke="#000" stroke-width="1.044" />
+			</svg>
+		</button>
+	</div>
+
+	<div class="wrapper-form wrapper-thanks" style="display: none;">
+		<picture>
+			<source srcset="./images/dist/gold-check-mobile.svg" width="119" height="123" loading="lazy" media="(max-width: 768px)">
+			<img src="./images/dist/gold-check.svg" width="228" height="236" loading="lazy" alt="Логотип">
+		</picture>
+		<div>
+			<h3 class="wrapper-thanks-title">
+				Ваша заявка на участие в клубе прията!
+			</h3>
+			<p class="wrapper-thanks-text">
+				Проверьте адрес электронной почты и следуйте подробным инструкциям
+			</p>
+		</div>
+		<button class="btn">Вернуться на сайт</button>
+		<button type="button" class="btn-close" data-btn-close>
+			<svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+				<path d="M.566 14.135 14.136.565m-13.57 0 13.57 13.57" stroke="#000" stroke-width="1.044" />
+			</svg>
+		</button>
+	</div>
 </main>
 
 	<footer class="footer">
@@ -544,8 +608,8 @@
 				<a href="#">Giraffe Fund</a>
 			</div>
 			<div class="footer-socials">
-				<img src="./images/dist/icon/telegram.svg" width="64" height="64" loading="lazy" alt="telegram">
-				<img src="./images/dist/icon/instagram.svg" width="64" height="64" loading="lazy" alt="instagram">
+				<a href="https://t.me/+ibP6D5NcLn4wNGUy"><img src="./images/dist/icon/telegram.svg" width="64" height="64" loading="lazy" alt="telegram"></a>
+				<a href="https://www.instagram.com/fundgiraffe/"><img src="./images/dist/icon/instagram.svg" width="64" height="64" loading="lazy" alt="instagram"></a>
 			</div>
 		</div>
 	</footer>

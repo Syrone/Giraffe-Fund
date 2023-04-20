@@ -13,7 +13,8 @@ $box-shadow: 0 1px 10px rgba($accent, .4)
 $box-shadow-2: 0px 0px 13px $accent
 $trt-1: 250ms ease
 $lineheight: 1.5 // Document Line Height
-$userfont: Sora, sans-serif // User Font Family
+$userfont: NotoSans, sans-serif // User Font Family
+$thirdfont: Sora, sans-serif
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -34,11 +35,12 @@ $gutter: $grid-gutter-width
 		font-weight: $fweight
 		src: url($furl) format('woff2')
 
-@include font('Sora', normal, 300, '../fonts/Sora-Light.woff2')
+@include font('NotoSans', normal, 400, '../fonts/NotoSans-Regular.woff2')
+@include font('NotoSans', normal, 500, '../fonts/NotoSans-Medium.woff2')
+@include font('NotoSans', normal, 600, '../fonts/NotoSans-SemiBold.woff2')
+@include font('NotoSans', normal, 700, '../fonts/NotoSans-Bold.woff2')
 @include font('Sora', normal, 400, '../fonts/Sora-Regular.woff2')
-@include font('Sora', normal, 500, '../fonts/Sora-Medium.woff2')
 @include font('Sora', normal, 600, '../fonts/Sora-SemiBold.woff2')
-@include font('Sora', normal, 700, '../fonts/Sora-Bold.woff2')
 
 // GENERAL CSS SETTINGS
 

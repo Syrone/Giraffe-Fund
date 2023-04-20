@@ -1,7 +1,36 @@
 .form-registration
 	&-title
 		font-size: 14px
+		font-weight: 500
 		text-align: center
 		color: $bg
 		margin-bottom: 15px
 		text-transform: none
+	.btn
+		font-size: 12px
+		&-transparent
+			font-size: 10px
+
+@media (min-width: 992px)
+	.form-registration
+		&-title
+			font-size: 29px
+			margin-bottom: 20px
+			text-transform: uppercase
+		.btn
+			font-size: 18px
+			&-transparent
+				font-size: 16px
+
+	.wrapper-form
+		form
+			padding-block: 50px 30px
+		input
+			font-size: 16px
+			line-height: normal
+			border-radius: 12px
+			padding: 16px
+			&::placeholder
+				font-size: 16px
+		.group + .group
+			margin-top: 16px

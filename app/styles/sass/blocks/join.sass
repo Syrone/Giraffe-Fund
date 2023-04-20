@@ -65,9 +65,6 @@
 				max-width: 360px
 				& + input
 					margin-top: 10px
-				text-align: left
-				&::placeholder
-					text-align: left
 		.btn
 			font-weight: 600
 			position: absolute
@@ -90,8 +87,12 @@
 				align-items: center
 				justify-content: center
 				gap: 15px
-				input + input
-					margin-top: unset
+				input
+					text-align: left
+					& + input
+						margin-top: unset
+					&::placeholder
+						text-align: left
 			.btn
 				font-size: 15px
 				text-transform: uppercase

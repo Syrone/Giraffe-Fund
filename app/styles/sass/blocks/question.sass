@@ -37,9 +37,9 @@
 	&-content
 		max-width: 280px
 		margin-inline: auto
+		font-weight: 500
 		&-title
 			font-size: 14px
-			font-weight: 500
 			text-transform: none
 			margin-bottom: 5px
 	&-contact
@@ -93,7 +93,9 @@
 			&::placeholder
 				text-align: left
 		textarea
+			font-family: inherit
 			min-height: 75px
+
 
 @media (min-width: 550px)
 	.question-contact
@@ -123,6 +125,7 @@
 			font-size: 16px
 			margin-inline: unset
 			margin-left: 10%
+			margin-bottom: 30px
 			&-title
 				font-size: 18px
 		&-contact
@@ -156,10 +159,13 @@
 			font-size: 24px
 			&-title
 				font-size: 30px
+				font-weight: 500
 		&-contact-item
 			font-size: 24px
-		&-form-title
-			font-size: 26px
+			gap: 25px
+		&-form
+			&-title
+				font-size: 26px
 			input
 				font-size: 16px
 				padding: 18px 25px

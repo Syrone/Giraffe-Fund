@@ -82,7 +82,8 @@
 			&-title
 				min-width: 200px
 				font-size: 11px
-				font-weight: 600
+				font-weight: 400
+				line-height: 1.2
 				text-transform: none
 				text-align: center
 				color: $bg
@@ -93,6 +94,8 @@
 				top: -20px
 				left: 50%
 				transform: translateX(-50%)
+				span
+					font-weight: 600
 			&-items
 				display: grid
 				grid-template-columns: repeat(2, 1fr)
@@ -108,10 +111,14 @@
 				&:nth-child(2)
 					grid-column: span 2
 					order: 1
+				&-text
+					font-size: 10px
+					font-weight: 500
 			&-subtitle
 				max-width: 350px
 				font-size: 9px
-				font-weight: 500
+				font-weight: 400
+				line-height: 1.2
 				line-height: normal
 				text-align: center
 				border-radius: 6px
@@ -201,6 +208,7 @@
 					font-size: 18px
 					min-width: 350px
 					top: -35px
+					padding: 10px
 				&-item-text
 					font-size: 14px
 					line-height: normal

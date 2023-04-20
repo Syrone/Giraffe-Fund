@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.body.classList.add('nav-active')
 	}
 
-	const closeForm = function() {
+	const closeForm = function () {
 		overlay.classList.remove('active')
 		signupForm.classList.remove('active')
 		loginForm.classList.remove('active')
@@ -67,11 +67,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		loginForm.classList.remove('active')
 		signupForm.classList.add('active')
 	})
-	
+
 	addEventOnElements(signupBtn, 'click', openForm)
 	addEventOnElements(closeBtn, 'click', closeForm)
 	overlay.addEventListener('click', closeForm)
-	
 
+	// SCROLL SECTIONS ACTIVE LINK
+	const sections = document.querySelectorAll('section[id]')
+
+	const scrollActive = () => {
+		const scrollY = window.scrollY
+
+		sections.forEach(current => {
+			const sectionHeight = current.offsetHeight,
+				sectionTop = current.offsetTop - 50,
+				sectionId = current.getAttribute('id'),
+				sectionsClass = document.querySelector('.navbar a[href*=' + sectionId + ']')
+
+			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+				sectionsClass.classList.add('active')
+			} else {
+				sectionsClass.classList.remove('active')
+			}
+		})
+	}
+	window.addEventListener('scroll', scrollActive)
 
 })
