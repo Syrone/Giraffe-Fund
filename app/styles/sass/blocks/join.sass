@@ -27,6 +27,18 @@
 		max-width: 1200px	
 		margin-inline: auto
 		position: relative
+		&::after
+			content: ''
+			width: 29px
+			height: 35px
+			background-image: url(../images/dist/icon/arrows-down.svg)
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
+			position: absolute
+			top: -47px
+			left: 50%
+			transform: translateX(-50%)
 		&.item
 			&::before
 				background: radial-gradient(25% 85% at 50% 0%, rgba(255, 228, 88, 0.33) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #E9C564 40%, #D3B35C 50%, #E8C462 60%, rgba(0, 0, 0, 0) 100%)
@@ -66,6 +78,8 @@
 @media (min-width: 768px)
 	.join
 		&-form
+			&::after
+				top: -60px
 			&-title
 				font-size: 20px
 			&-text
@@ -86,6 +100,10 @@
 @media (min-width: 992px)
 	.join
 		&-form
+			&::after
+				width: 51px
+				height: 61px
+				top: -90px
 			&-title
 				font-size: 36px
 			&-text
@@ -101,4 +119,5 @@
 			.btn
 				max-width: max-content
 				font-size: 18px
-				padding: 15px 40px
+				padding: 20px 40px
+				bottom: -35px

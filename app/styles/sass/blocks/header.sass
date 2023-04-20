@@ -6,7 +6,7 @@
 	top: 0
 	left: 0
 	z-index: 10
-	transition: $trt-1
+	transition: .3s ease-in-out
 	.container
 		display: flex
 		justify-content: space-between
@@ -151,5 +151,8 @@
 			transform: translateX(-50%)
 
 	.header
+		background-color: transparent
+		&.active
+			background-color: #2F2F2F
 		.logo
 			order: 0

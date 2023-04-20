@@ -226,34 +226,6 @@
 			img
 				width: 110px
 
-
-@media (min-width: 850px)
-	.strategy-article
-		position: relative
-		.graph
-			&::before
-				display: block
-				content: ''
-				width: 40px
-				height: 40px
-				background-image: url(../images/dist/icon/btc.svg)
-				background-size: cover
-				position: absolute
-				left: 210px
-				bottom: 75px
-				z-index: 1
-			&::after
-				display: block
-				content: ''
-				width: 40px
-				height: 40px
-				background-image: url(../images/dist/icon/dollar.svg)
-				background-size: cover
-				position: absolute
-				right: 218px
-				top: 95px
-				z-index: 1
-				
 @media (min-width: 992px)
 	.strategy
 		.effect-light
@@ -267,6 +239,39 @@
 		&-article
 			padding: 90px 30px 40px
 			margin-block-end: 160px
+			position: relative
+			&::after
+				content: ''
+				width: 3px
+				height: 150px
+				background: linear-gradient(180deg, #E9C563 64.94%, rgba(98, 84, 46, 0) 100%)
+				position: absolute
+				bottom: -145px
+				left: 50%
+				transform: translateX(-50%)
+			.graph
+				&::before
+					display: block
+					content: ''
+					width: 58px
+					height: 58px
+					background-image: url(../images/dist/icon/btc.svg)
+					background-size: cover
+					position: absolute
+					left: 110px
+					bottom: 100px
+					z-index: 1
+				&::after
+					display: block
+					content: ''
+					width: 58px
+					height: 58px
+					background-image: url(../images/dist/icon/dollar.svg)
+					background-size: cover
+					position: absolute
+					right: 112px
+					top: 110px
+					z-index: 1
 			.article-title
 				min-width: 500px
 				font-size: 24px
@@ -278,6 +283,23 @@
 		&-text
 			max-width: 940px
 			font-size: 24px
+		.btn
+			font-size: 18px
+			font-weight: 600
+			text-transform: uppercase
+			position: relative
+			&::after
+				content: ''
+				width: 37px
+				height: 92px
+				background-image: url(../images/dist/icon/arrow-down.svg)
+				background-repeat: no-repeat
+				background-size: cover
+				background-position: center
+				position: absolute
+				bottom: -110px
+				left: 50%
+				transform: translateX(-50%)
 
 @media (min-width: 1200px)
 	.strategy::before
