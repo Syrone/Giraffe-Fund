@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Navbar toggler for mobile
 	const navbar = document.querySelector('[data-navbar]'),
 		navTogglers = document.querySelectorAll('[data-nav-toggler]'),
+		navLink = document.querySelectorAll('[data-nav-link]'),
 		overlay = document.querySelector('[data-overlay]')
 
 	const toggleNav = function () {
@@ -71,26 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	addEventOnElements(signupBtn, 'click', openForm)
 	addEventOnElements(closeBtn, 'click', closeForm)
 	overlay.addEventListener('click', closeForm)
-
-	// SCROLL SECTIONS ACTIVE LINK
-	const sections = document.querySelectorAll('section[id]')
-
-	const scrollActive = () => {
-		const scrollY = window.scrollY
-
-		sections.forEach(current => {
-			const sectionHeight = current.offsetHeight,
-				sectionTop = current.offsetTop - 50,
-				sectionId = current.getAttribute('id'),
-				sectionsClass = document.querySelector('.navbar a[href*=' + sectionId + ']')
-
-			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-				sectionsClass.classList.add('active')
-			} else {
-				sectionsClass.classList.remove('active')
-			}
-		})
-	}
-	window.addEventListener('scroll', scrollActive)
 
 })
