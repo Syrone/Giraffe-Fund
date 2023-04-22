@@ -86,7 +86,7 @@ function styles() {
 		.pipe(eval(preprocessor)({ 'include css': true }))
 		.pipe(postCss([
 			autoprefixer({ grid: 'autoplace' }),
-			// cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
+			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
 		]))
 		.pipe(concat('app.min.css'))
 		.pipe(dest('app/css'))
