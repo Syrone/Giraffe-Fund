@@ -28,6 +28,32 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	addEventOnElements(navTogglers, 'click', toggleNav)
+	addEventOnElements(navLink, 'click', () => {
+		overlay.classList.remove('active')
+		navbar.classList.remove('active')
+		document.body.classList.remove('nav-active')
+	})
+
+	// SCROLL SECTIONS ACTIVE LINK
+	const sections = document.querySelectorAll('section[id]')
+
+	const scrollActive = () => {
+		const scrollY = window.scrollY
+
+		sections.forEach(current => {
+			const sectionHeight = current.offsetHeight,
+				sectionTop = current.offsetTop - 58,
+				sectionId = current.getAttribute('id'),
+				sectionsClass = document.querySelector('.navbar-list a[href*=' + sectionId + ']')
+
+			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+				sectionsClass.classList.add('active')
+			} else {
+				sectionsClass.classList.remove('active')
+			}
+		})
+	}
+	window.addEventListener('scroll', scrollActive)
 
 	// CHANGE BACKGROUND HEADER
 	const scrollHeader = () => {
@@ -48,13 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const openForm = function () {
 		overlay.classList.add('active')
-		signupForm.classList.add('active')
+		loginForm.classList.add('active')
 		document.body.classList.add('nav-active')
 	}
 
 	const closeForm = function () {
 		overlay.classList.remove('active')
-		signupForm.classList.remove('active')
 		loginForm.classList.remove('active')
 		document.body.classList.remove('nav-active')
 	}
@@ -64,10 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		loginForm.classList.add('active')
 	})
 
-	signLink.addEventListener('click', () => {
-		loginForm.classList.remove('active')
-		signupForm.classList.add('active')
-	})
+	// signLink.addEventListener('click', () => {
+	// 	loginForm.classList.remove('active')
+	// 	signupForm.classList.add('active')
+	// })
 
 	addEventOnElements(signupBtn, 'click', openForm)
 	addEventOnElements(closeBtn, 'click', closeForm)

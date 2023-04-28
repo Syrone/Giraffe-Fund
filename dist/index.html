@@ -37,8 +37,8 @@
 
 			<ul class="navbar-list">
 
-				<li class="navbar-item active">
-					<a href="#home" class="navbar-link" data-nav-link>Главная</a>
+				<li class="navbar-item">
+					<a href="#home" class="navbar-link active" data-nav-link>Главная</a>
 				</li>
 
 				<li class="navbar-item">
@@ -157,10 +157,13 @@
 				<span class="effect effect-smoke effect-smoke-4"></span>
 				<span class="effect effect-smoke effect-smoke-5"></span>
 				<span class="effect effect-light effect-light-4"></span>
-				<video src="" poster="./images/dist/poster-video.jpg">
-
-				</video>
-				<span class="video-play"></span>
+				<div class="video-poster" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+					<img class="img-poster" src="./images/dist/poster-video.jpg" style="cursor:pointer" />
+					<span class="video-play"></span>
+				</div>
+				<div class="video-iframe" style="display:none">
+					<iframe src="https://www.youtube.com/embed/nNkBBItvSTM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
 			</div>
 
 			<div class="benefits-footer" id="more-info">
@@ -470,7 +473,7 @@
 		</div>
 	</section>
 
-	<div class="wrapper-form" data-form-signup>
+	<!-- <div class="wrapper-form" data-form-signup>
 		<form action="#" class="form-registration">
 			<h3 class="form-registration-title">
 				Зарегистрироваться
@@ -503,7 +506,7 @@
 				</svg>
 			</button>
 		</form>
-	</div>
+	</div> -->
 
 	<div class="wrapper-form" data-form-login>
 		<form action="#" class="form-registration">
@@ -521,9 +524,9 @@
 			<div class="group">
 				<button class="btn" type="submit">Войти</button>
 			</div>
-			<div class="group group-login">
+			<!-- <div class="group group-login">
 				<button class="btn btn-outline" type="button" data-signup-link>Создать аккаунт</button>
-			</div>
+			</div> -->
 			<div class="group">
 				<button class="btn-transparent" type="button" data-login-link>Забыли пароль?</button>
 			</div>
@@ -535,7 +538,7 @@
 		</form>
 	</div>
 
-	<div class="wrapper-form wrapper-thanks" style="display: none;">
+	<div class="wrapper-form wrapper-thanks">
 		<picture>
 			<source srcset="./images/dist/gold-logo-mobile.svg" width="119" height="123" media="(max-width: 768px)">
 			<img src="./images/dist/gold-logo.svg" width="228" height="236" loading="lazy" alt="Логотип">
@@ -556,7 +559,7 @@
 		</button>
 	</div>
 
-	<div class="wrapper-form wrapper-thanks" style="display: none;">
+	<div class="wrapper-form wrapper-thanks">
 		<picture>
 			<source srcset="./images/dist/gold-check-mobile.svg" width="119" height="123" media="(max-width: 768px)">
 			<img src="./images/dist/gold-check.svg" width="228" height="236" loading="lazy" alt="Логотип">
@@ -577,7 +580,7 @@
 		</button>
 	</div>
 
-	<div class="wrapper-form wrapper-thanks" style="display: none;">
+	<div class="wrapper-form wrapper-thanks">
 		<picture>
 			<source srcset="./images/dist/gold-check-mobile.svg" width="119" height="123" media="(max-width: 768px)">
 			<img src="./images/dist/gold-check.svg" width="228" height="236" loading="lazy" alt="Логотип">

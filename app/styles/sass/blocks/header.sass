@@ -61,6 +61,11 @@
 		padding-block: 8px
 		position: relative
 		transition: $trt-1
+	&-link
+		font-size: 14px
+		font-weight: 300
+		text-transform: uppercase
+		position: relative
 		&::before
 			content: ''
 			width: 3px
@@ -77,10 +82,6 @@
 			transform: translateX(10px)
 			&::before
 				opacity: 1
-	&-link
-		font-size: 14px
-		font-weight: 300
-		text-transform: uppercase
 	&.active
 		transform: translateX(450px)
 		transition-duration: 500ms
@@ -139,14 +140,14 @@
 		gap: 35px
 		margin-inline: auto
 
-	.navbar-item
+	.navbar-link
 		&:is(:hover, :focus-visible, .active)
 			transform: unset
 		&::before
 			width: 10px
 			height: 3px
 			top: auto
-			bottom: 0
+			bottom: -30%
 			left: 50%
 			transform: translateX(-50%)
 
